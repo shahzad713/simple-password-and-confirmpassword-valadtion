@@ -19,7 +19,7 @@ const Form = () => {
       
     }else{
       return(
-        <div>something erroe try again later</div>
+        <div>something is error ocure try again later</div>
       )
     }
   };
@@ -73,7 +73,7 @@ const Form = () => {
 
           <br />
         </div>
-        <button type="button" class="btn btn-success  " onClick={handleSubmit}>
+        <button type="button" disabled={password.length !==ConfirmPassword.length } class="btn btn-success  " onClick={handleSubmit}>
           Submit
         </button>
       </form>

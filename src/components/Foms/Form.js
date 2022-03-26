@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+
+import  React ,{useState} from 'react';
 
 const Form = () => {
   const [password, setPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
   const handleSubmit = () => {
-    if (password.length == ConfirmPassword.length) alert("every thing is ok");
+    if (password.length  == ""){
+      alert('password should not be emapty')
+    } 
+   else if (ConfirmPassword.length  == ""){
+      alert('confirmpassword should not be emapty')
+    } 
     else if (password.length !== ConfirmPassword.length) {
       alert("enter correct  password");
+    }else if(password.length == ConfirmPassword.length){
+      alert("every thing is ok")
+      
+    }else{
+      return(
+        <div>something erroe try again later</div>
+      )
     }
   };
+ 
+
 
   return (
     <div className="form__div">
@@ -22,6 +38,7 @@ const Form = () => {
             <input
               type="text"
               className="form-control"
+              
               id="inputPassword"
               placeholder="Password"
               value={password}
@@ -47,6 +64,7 @@ const Form = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
+          <br/>
           {!ConfirmPassword.length
             ? null
             : password == ConfirmPassword

@@ -15,7 +15,7 @@ const Form = () => {
     else if (password.length !== ConfirmPassword.length) {
       alert("enter correct  password");
     }else if(password.length == ConfirmPassword.length){
-      alert("every thing is ok")
+      alert(`you password is:${password}`)
       
     }else{
       return(

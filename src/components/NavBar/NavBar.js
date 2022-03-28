@@ -1,14 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-success">
-        <a class="navbar-brand" href="#">
-          Navbar
+    <div className="navbar-link">
+      <nav className="navbar navbar-expand-lg navbar-light bg-success">
+        <a className="navbar-brand" href="#">
+          Demo projects
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -16,26 +17,30 @@ const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Home <span class="sr-only">(current)</span>
-              </a>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <NavLink className="nav-link" to="/path">
+                Home <span className="sr-only">(current)</span>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Features
-              </a>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/">
+                Authentication
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Pricing
-              </a>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/home">
+                Redux
+              </NavLink>
             </li>
-            
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/login">
+                Api
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>

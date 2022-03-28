@@ -73,7 +73,7 @@ const Form = () => {
 
           <br />
         </div>
-        <button type="button" disabled={password.length !==ConfirmPassword.length } class="btn btn-success  " onClick={handleSubmit}>
+        <button type="button" disabled={password.length !==ConfirmPassword.length||password !==ConfirmPassword } class="btn btn-success  " onClick={handleSubmit}>
           Submit
         </button>
       </form>

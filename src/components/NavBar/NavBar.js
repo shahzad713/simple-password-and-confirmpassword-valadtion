@@ -22,7 +22,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <NavLink className="nav-link" to="/path">
+              <NavLink className="nav-link" to="/home">
                 Home <span className="sr-only">(current)</span>
               </NavLink>
             </li>
@@ -32,12 +32,12 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home">
+              <NavLink className="nav-link" to="/redux">
                 Redux
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/login">
+              <NavLink className="nav-link" to="/api">
                 Api
               </NavLink>
             </li>
